@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PlayPop · Elige tu juego</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&family=Shrikhand&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="blobs" aria-hidden="true">
+  <span class="blob b1"></span><span class="blob b2"></span>
+  <span class="blob b3"></span><span class="blob b4"></span>
+</div>
+
+<header class="topbar">
+  <a class="logo" href="index.html"><span class="logo-dot"></span> PlayPop! <em>est. 2026</em></a>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <p class="kicker">★ edición vintage ★ mazo mágico ★</p>
+    <h1>Elige tu <span class="hl">carta</span> y a jugar</h1>
+    <p class="sub">Cinco clásicos con look de juguete. Toca una carta para abrir su juego en esta misma pestaña.</p>
+  </section>
+
+  <section class="promo">
+    <h2>★ Mira cómo se juega ★</h2>
+    <p class="promo-sub">Toca para abrir ese juego.</p>
+    <div class="carousel">
+      <button class="car-btn" id="carPrev" aria-label="Juego anterior">‹</button>
+      <div class="car-view"><div class="car-track" id="carTrack">
+        <div class="car-slide"><a class="demo" href="juegos/tetris.html"><span class="demo-tag po-tetris">1 · Tetris</span><canvas id="demo-tetris" width="120" height="200"></canvas><span class="demo-cap">Apila y borra líneas</span></a></div>
+        <div class="car-slide"><a class="demo" href="juegos/snake.html"><span class="demo-tag po-snake">2 · Snake</span><canvas id="demo-snake" width="144" height="144"></canvas><span class="demo-cap">La CPU caza manzanas</span></a></div>
+        <div class="car-slide"><a class="demo" href="juegos/gato.html"><span class="demo-tag po-gato">3 · Gato</span><div class="demo-gato-mini" id="demo-gato"></div><span class="demo-cap">CPU contra CPU</span></a></div>
+        <div class="car-slide"><a class="demo" href="juegos/pong.html"><span class="demo-tag po-pong">4 · Pin Pon</span><canvas id="demo-pong" width="180" height="110"></canvas><span class="demo-cap">Rally infinito</span></a></div>
+        <div class="car-slide"><a class="demo" href="juegos/solitario.html"><span class="demo-tag po-solitario">5 · Solitario</span><div class="demo-sol-mini" id="demo-sol"></div><span class="demo-cap">Ordena los palos A → K</span></a></div>
+      </div></div>
+      <button class="car-btn" id="carNext" aria-label="Juego siguiente">›</button>
+    </div>
+    <div class="car-dots" id="carDots"></div>
+  </section>
+
+  <section class="deck">
+    <!-- 1 TETRIS -->
+    <div class="slot">
+      <a class="poker-card tema-tetris" href="juegos/tetris.html">
+        <span class="corner tl"><b>1</b><i>♥</i></span>
+        <span class="corner br"><b>1</b><i>♥</i></span>
+        <span class="pip-big">1</span>
+        <div class="art">
+          <svg viewBox="0 0 120 96" aria-hidden="true">
+            <rect x="14" y="54" width="24" height="24" rx="7" fill="#FF9AA2" stroke="#fff" stroke-width="4"/>
+            <rect x="38" y="54" width="24" height="24" rx="7" fill="#FF6B81" stroke="#fff" stroke-width="4"/>
+            <rect x="38" y="30" width="24" height="24" rx="7" fill="#FFC2C7" stroke="#fff" stroke-width="4"/>
+            <rect x="62" y="54" width="24" height="24" rx="7" fill="#A0C4FF" stroke="#fff" stroke-width="4"/>
+            <rect x="62" y="30" width="24" height="24" rx="7" fill="#FFD97D" stroke="#fff" stroke-width="4"/>
+            <rect x="62" y="6" width="24" height="24" rx="7" fill="#B5EAB6" stroke="#fff" stroke-width="4"/>
+          </svg>
+        </div>
+        <span class="card-name">Tetris</span>
+        <span class="card-desc">Apila bloques y borra líneas</span>
+      </a>
+      <a class="play-out po-tetris" href="juegos/tetris.html">¡Jugar! →</a>
+    </div>
+
+    <!-- 2 SNAKE -->
+    <div class="slot">
+      <a class="poker-card tema-snake" href="juegos/snake.html">
+        <span class="corner tl"><b>2</b><i>♣</i></span>
+        <span class="corner br"><b>2</b><i>♣</i></span>
+        <span class="pip-big">2</span>
+        <div class="art">
+          <svg viewBox="0 0 120 96" aria-hidden="true">
+            <path d="M14 66 Q30 66 30 50 Q30 34 48 34 L74 34 Q90 34 90 50" fill="none" stroke="#3FA46A" stroke-width="14" stroke-linecap="round"/>
+            <circle cx="90" cy="56" r="11" fill="#3FA46A" stroke="#fff" stroke-width="4"/>
+            <circle cx="87" cy="53" r="2.6" fill="#fff"/><circle cx="93" cy="53" r="2.6" fill="#fff"/>
+            <circle cx="30" cy="22" r="10" fill="#FF6B81" stroke="#fff" stroke-width="4"/>
+            <rect x="27" y="8" width="6" height="8" rx="3" fill="#3FA46A"/>
+          </svg>
+        </div>
+        <span class="card-name">Snake</span>
+        <span class="card-desc">Come, crece y no te muerdas</span>
+      </a>
+      <a class="play-out po-snake" href="juegos/snake.html">¡Jugar! →</a>
+    </div>
+
+    <!-- 3 GATO -->
+    <div class="slot">
+      <a class="poker-card tema-gato" href="juegos/gato.html">
+        <span class="corner tl"><b>3</b><i>♦</i></span>
+        <span class="corner br"><b>3</b><i>♦</i></span>
+        <span class="pip-big">3</span>
+        <div class="art">
+          <svg viewBox="0 0 120 96" aria-hidden="true">
+            <rect x="18" y="10" width="84" height="76" rx="20" fill="#DCE9FF" stroke="#fff" stroke-width="4"/>
+            <text x="32" y="62" font-family="Fredoka,sans-serif" font-weight="700" font-size="38" fill="#4A7DFF">X</text>
+            <text x="64" y="62" font-family="Fredoka,sans-serif" font-weight="700" font-size="38" fill="#FF6B81">O</text>
+          </svg>
+        </div>
+        <span class="card-name">Gato</span>
+        <span class="card-desc">3 en línea: tú contra compa o CPU</span>
+      </a>
+      <a class="play-out po-gato" href="juegos/gato.html">¡Jugar! →</a>
+    </div>
+
+    <!-- 4 PONG -->
+    <div class="slot">
+      <a class="poker-card tema-pong" href="juegos/pong.html">
+        <span class="corner tl"><b>4</b><i>★</i></span>
+        <span class="corner br"><b>4</b><i>★</i></span>
+        <span class="pip-big">4</span>
+        <div class="art">
+          <svg viewBox="0 0 120 96" aria-hidden="true">
+            <line x1="60" y1="8" x2="60" y2="88" stroke="#fff" stroke-width="5" stroke-dasharray="7 7"/>
+            <rect x="14" y="28" width="12" height="40" rx="7" fill="#3A3340"/>
+            <rect x="94" y="28" width="12" height="40" rx="7" fill="#3A3340"/>
+            <circle cx="60" cy="48" r="11" fill="#FF9AA2" stroke="#fff" stroke-width="4"/>
+          </svg>
+        </div>
+        <span class="card-name">Pin Pon</span>
+        <span class="card-desc">Duelo de paletas a 5 puntos</span>
+      </a>
+      <a class="play-out po-pong" href="juegos/pong.html">¡Jugar! →</a>
+    </div>
+
+    <!-- 5 SOLITARIO -->
+    <div class="slot">
+      <a class="poker-card tema-solitario" href="juegos/solitario.html">
+        <span class="corner tl"><b>5</b><i>♠</i></span>
+        <span class="corner br"><b>5</b><i>♠</i></span>
+        <span class="pip-big">5</span>
+        <div class="art">
+          <svg viewBox="0 0 120 96" aria-hidden="true">
+            <rect x="26" y="14" width="40" height="56" rx="8" fill="#fff" stroke="#7C5CD6" stroke-width="4" transform="rotate(-10 46 42)"/>
+            <rect x="54" y="14" width="40" height="56" rx="8" fill="#fff" stroke="#3A3340" stroke-width="4" transform="rotate(10 74 42)"/>
+            <text x="60" y="58" text-anchor="middle" font-family="Fredoka,sans-serif" font-weight="700" font-size="34" fill="#3A3340">♠</text>
+            <text x="38" y="44" text-anchor="middle" font-family="Fredoka,sans-serif" font-weight="700" font-size="16" fill="#7C5CD6">A</text>
+          </svg>
+        </div>
+        <span class="card-name">Solitario</span>
+        <span class="card-desc">Klondike clásico: ordena los 4 palos</span>
+      </a>
+      <a class="play-out po-solitario" href="juegos/solitario.html">¡Jugar! →</a>
+    </div>
+  </section>
+
+  <footer class="foot">Que gane el mejor — ¿aceptas el reto? · Vuelve con ← Volver al mazo desde cada juego.</footer>
+</main>
+<script src="js/main.js"></script>
+<script src="js/demo.js"></script>
+</body>
+</html>
